@@ -5,12 +5,6 @@ img, video{
   height: auto;
 }
 
-.landmarks-grid{
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
 figure{ 
   margin:0;
 }
@@ -53,4 +47,50 @@ You can change the 100px as needed, just change it in both padding-bottom and wi
 	height: 100%;
 }
 
+.featured-landmark {
+  background-color: var(--alternate-background);
+  color: var(--alternate-text);
+}
 
+.landmarks-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+}
+
+/* Landmark Cards */
+
+.landmark{
+  display: flex;
+  flex-direction: column;
+  gap: 1 rem;
+  justify-content: space-between;
+  border: 2px solid #000000;
+  background-color: var(--alternate-background);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.landmark figure{
+  position: relative;
+}
+
+.landmark figcaption{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: var(--space-2);
+  background: var(--primary-background);
+  font-size: 0.7rem;                     /* smaller than button */
+  font-weight: 600;
+  text-transform: uppercase;             /* gives badge feel */
+}
+
+.landmark figure img{
+  display: block;
+}
+
+.landmark h3{
+  padding: var(--space-2);
+  text-align: center;
+}
